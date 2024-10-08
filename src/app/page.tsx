@@ -1,10 +1,8 @@
 import React from 'react';
 
 import { Heading, Flex, Text, Button,  Avatar, RevealFx } from '@/once-ui/components';
-import { Projects } from '@/app/work/components/Projects';
 
-import { about, baseURL, home, newsletter, person, routes } from '@/app/resources'
-import { Mailchimp } from '@/app/components';
+import { baseURL, home, person, routes } from '@/app/resources'
 import { Posts } from '@/app/blog/components/Posts';
 
 export function generateMetadata() {
@@ -86,41 +84,14 @@ export default function Home() {
 								{home.subline}
 							</Text>
 						</RevealFx>
-						<RevealFx translateY="12" delay={0.4}>
-							<Button
-								data-border="rounded"
-								href="/about"
-								variant="tertiary"
-								suffixIcon="chevronRight"
-								size="m">
-								<Flex
-									gap="8"
-									alignItems="center">
-									{about.avatar.display && (
-										<Avatar
-											style={{marginLeft: '-0.75rem', marginRight: '0.25rem'}}
-											src={person.avatar}
-											size="m"/>
-										)}
-										About me
-								</Flex>
-							</Button>
-						</RevealFx>
 					</Flex>
 				
 			</Flex>
-			<RevealFx translateY="16" delay={0.6}>
-				<Projects range={[1,1]}/>
-			</RevealFx>
 			{routes['/blog'] && (
 				<Flex fillWidth paddingX="20">
 					<Posts range={[1,2]} columns="2"/>
 				</Flex>
 			)}
-			<Projects range={[2]}/>
-			{ newsletter.display &&
-				<Mailchimp/>
-			}
 		</Flex>
 	);
 }

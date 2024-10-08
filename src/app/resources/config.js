@@ -2,8 +2,6 @@ const baseURL = 'nextjs-portfolio.up.railway.app'
 
 const routes = {
     '/':        true,
-    '/about':   true,
-    '/work':    true,
     '/blog':    true,
     '/gallery': true,
 }
@@ -21,15 +19,15 @@ const effects = {
 }
 
 const style = {
-    theme:       'dark',         // dark | light
-    neutral:     'gray',         // sand | gray | slate
+    theme:       'light',         // dark | light
+    neutral:     'slate',         // sand | gray | slate
     brand:       'aqua',         // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
-    accent:      'yellow',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
+    accent:      'emerald',       // blue | indigo | violet | magenta | pink | red | orange | yellow | moss | green | emerald | aqua | cyan
     solid:       'contrast',     // color | contrast
     solidStyle:  'flat',         // flat | plastic
     border:      'playful',      // rounded | playful | conservative
     surface:     'translucent',  // filled | translucent
-    transition:  'all'           // all | micro | macro
+    transition:  'micro'           // all | micro | macro
 }
 
 const display = {
@@ -37,13 +35,4 @@ const display = {
     time:     true
 }
 
-const mailchimp = {
-    action: 'https://url/subscribe/post?parameters',
-    effects: {
-        gradient: true,
-        dots:     false,
-        lines:    true,
-    }
-}
-
-export { routes, protectedRoutes, effects, style, display, mailchimp, baseURL };
+export { routes, protectedRoutes, effects, style, display, baseURL };
